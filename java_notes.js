@@ -94,3 +94,60 @@ function equalityTest(myVal) {
 }
 //If myVal is equal to 10, the equality operator returns true, so the code in the curly braces will execute, and the function will return "Equal". Otherwise, the function will return "Not Equal".
 //Strict equality (===) is the counterpart to the equality operator (==). Unlike the equality operator, strict equality tests both the data type and value of the compared elements.
+
+
+
+
+
+
+// Chaining If Else Statements
+
+function testSize(num) {
+
+  if (num<5) {
+    return "Tiny"
+  } else if (num<10) {
+    return "Small"
+  } else if (num<15) {
+    return "Medium"
+  } else if (num<20) {
+    return "Large"
+  } else {
+    return "Huge"
+  }
+     
+  return "Change Me";
+
+}
+// change value to test
+testSize(7);
+
+
+
+
+//Golf Code
+function golfScore(par, strokes) {
+
+  if (strokes==1) {
+    return "Hole-in-one!"
+  } else if (strokes <= par -2) {
+    return "Eagle"
+  } else if (strokes == par -1) {
+    return "Birdie"
+  } else if (strokes == par) {
+    return "Par"
+  } else if (strokes == par +1) {
+    return "Bogey"
+  } else if (strokes == par +2) {
+    return "Double Bogey"
+  } else {
+    return "Go Home!"
+  }
+  
+  return "Change Me";
+
+}
+
+// change these values to test
+golfScore(4, 1);
+
