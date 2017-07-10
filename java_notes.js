@@ -151,3 +151,70 @@ function golfScore(par, strokes) {
 // change these values to test
 golfScore(4, 1);
 
+
+
+
+
+
+//Selecting from many options with Switch Statements
+//Statements are executed from the first matched case value until a break is encountered
+
+
+function caseInSwitch(val) {
+  var answer = "";
+
+  switch (val) {
+    case 1:
+      answer="alpha";
+      break;
+    case 2:
+      answer="beta";
+      break;
+    case 3:
+      answer="gamma";
+      break;
+    case 4:
+      answer="delta";
+    break;
+    default:
+      answer="No dice"
+  }
+  
+  return answer;  
+}
+
+// change this value to test
+caseInSwitch(1);
+
+
+
+
+
+//Multiple Identical Options in Switch Statements
+
+function sequentialSizes(val) {
+  var answer = "";
+
+  switch(val){
+    case 1:
+    case 2:
+    case 3:
+      answer="Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer="Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer="High";
+      break;
+  }
+  
+  return answer;  
+}
+
+// change this value to test
+sequentialSizes(1);
