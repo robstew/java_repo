@@ -218,3 +218,126 @@ function sequentialSizes(val) {
 
 // change this value to test
 sequentialSizes(1);
+
+
+
+
+
+
+
+//Accessing Objects Properties with Bracket Notation
+//If the property of the object you are trying to access has a space in it, you will need to use bracket notation.
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+var entreeValue = testObj["an entree"];  //entreeValue = 'hamburger'
+var drinkValue = testObj["the drink"];  //drinkValue = 'water'
+
+
+//Accessing Objects Properties with Variables
+//Another use of bracket notation on objects is to use a variable to access a property. This can be very useful for iterating through lists of the object properties or for doing the lookup.
+//Note that we do not use quotes around the variable name when using it to access the property because we are using the value of the variable, not the name
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+var playerNumber = 16;      
+var player = testObj[playerNumber]; //player = "Montana"
+
+
+
+//Updating Object Properties
+//After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable. You can use either dot or bracket notation to update.
+// Example
+
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Free Code Camp Campers"]
+};
+
+myDog.name="Happy Coder"; //changes myDog.name to 'Happy Coder'
+
+
+
+
+//Delete Properties from a JavaScript Object
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Free Code Camp Campers"],
+  "bark": "woof"
+};
+
+delete myDog.tails; //removes tails property from var myDog
+
+
+
+
+//Using Objects for Lookups
+//Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to "lookup" values rather than a switch statement or an if/else chain. 
+//This is most useful when you know that your input data is limited to a certain range.
+function phoneticLookup(val) {
+  var result = "";
+
+  var lookUp = {
+    "alpha":"Adams",
+    "bravo":"Boston",
+    "charlie":"Chicago",
+    "delta":"Denver",
+    "echo":"Easy",
+    "foxtrot":"Frank"
+  }
+  result=lookUp[val];
+
+  return result;
+}
+
+// Change this value to test
+phoneticLookup("alpha"); //output is "Adams"
+
+
+
+
+
+
+//Testing Objects for Properties
+//Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object
+//has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+
+  if(myObj.hasOwnProperty(checkProp)){
+    return myObj[checkProp];
+  }
+  else{
+    return "Not Found"}
+  
+  return "Change Me!";
+}
+
+checkObj("gift"); //returns 'pony'
+checkObj("house"); //returns 'Not Found'
+
+
+
+
+
+
+
+//Manipulating Complex Objects
+//Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. 
+//They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+//You will need to place a comma after every object in the array, unless it is the last object in the array.
