@@ -335,9 +335,137 @@ checkObj("house"); //returns 'Not Found'
 
 
 
-
-
 //Manipulating Complex Objects
 //Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. 
 //They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
 //You will need to place a comma after every object in the array, unless it is the last object in the array.
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [ 
+      "CS", 
+      "8T", 
+      "LP" ],
+    "gold": true
+  }, // don't forget this comma
+    {
+    "artist": "Elton John",
+    "title": "Rocket Man",
+    "release_year": 1973,
+    "formats": [ 
+      "CS", 
+      "8T", 
+      "LP" ],
+    "gold": true
+  }
+];
+
+
+
+//Accessing Nested Objects
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+
+var gloveBoxContents=myStorage.car.inside["glove box"]; //gloveBoxContents = "maps"
+
+
+
+
+
+
+//Accessing Nested Arrays
+//As we have seen in earlier examples, objects can contain both nested objects and nested arrays. 
+//Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays.
+
+var myPlants = [
+  { 
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }  
+];
+
+var secondTree = myPlants[1].list[1]; //secondTree = "pine"
+
+
+
+
+
+
+
+
+//Iterate with JavaScript For Loops
+//You can run the same code multiple times by using a loop.
+//The most common type of JavaScript loop is called a "for loop" because it runs "for" a specific number of times.
+//For loops are declared with three optional expressions separated by semicolons:
+//for ([initialization]; [condition]; [final-expression])
+//The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable.
+//The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When condition is false at the start of the iteration, 
+//the loop will stop executing. This means if condition starts as false, your loop will never execute.
+//The final-expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter.
+//In the following example we initialize with i = 0 and iterate while our condition i < 5 is true. We'll increment i by 1 in each loop iteration with i++ as our final-expression.
+var ourArray = [];
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+//ourArray will now contain [0,1,2,3,4]
+
+var myArray = [];
+for (var i = 1; i < 6; i++) {
+  myArray.push(i);
+}
+//myArray will now contain [1,2,3,4,5]
+
+
+
+
+
+//Iterate Odd Numbers With a For Loop
+//For loops don't have to iterate one at a time. By changing our final-expression, we can count by even numbers.
+//We'll start at i = 0 and loop while i < 10. We'll increment i by 2 each loop with i += 2.
+var ourArray = [];
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+//ourArray will now contain [0,2,4,6,8]
+
+var myArray = [];
+for (var i = 1; i < 10; i += 2){
+  myArray.push(i);
+}
+//myArray will now contain [1,3,5,7,9]
+
+
+/////////////////////////////////////////////////////////push() adds at end; pop() deletes from end. unshift() adds to front; shift() deletes from front.
+
+
+//Count backwards for a loop
+var myArray = [];
+
+for (var i = 9; i > 0; i-=2) {
+  myArray.push(i);
+}
+//myArray will now contain [9,7,5,3,1]
