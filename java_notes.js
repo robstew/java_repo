@@ -460,6 +460,7 @@ for (var i = 1; i < 10; i += 2){
 
 
 /////////////////////////////////////////////////////////push() adds at end; pop() deletes from end. unshift() adds to front; shift() deletes from front.
+////////////////////////////////////////////////////////++ increases the integer by one and += increases the integer by the number of your choice.
 
 
 //Count backwards for a loop
