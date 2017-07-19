@@ -470,3 +470,29 @@ for (var i = 9; i > 0; i-=2) {
   myArray.push(i);
 }
 //myArray will now contain [9,7,5,3,1]
+
+
+
+
+
+
+
+
+//Nesting For Loops
+//If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays
+
+function multiplyAll(arr) {
+  var product = 1;
+  
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr[i].length; j++)
+    product = product * arr[i][j];
+    
+  }
+  
+ 
+  return product;
+}
+
+// Modify values below to test your code
+multiplyAll([[1,2],[3,4],[5,6,7]]);
