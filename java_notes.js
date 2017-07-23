@@ -515,3 +515,66 @@ while (i <  5) {
 }
 // myArray will now contain [0,1,2,3,4]
 
+
+
+
+
+
+
+
+
+
+
+//JavaScript events
+//click event = notification
+//must be handled
+//button click = write code to do something
+
+var buttonRock = document.getElementById("action-rock");
+var buttonPaper = document.getElementById("action-paper");
+var buttonScissors = document.getElementById("action-scissors");
+
+//buttonRock.innerHTML="interesting.."; //this would change the rock button to "interesting"
+//buttonRock.style.backgroundColor="red"; //this would change the background of the rock button to red
+
+buttonRock.addEventListener("click", function() {
+  alert("You played ROCK");
+});
+
+buttonPaper.addEventListener("click", function() {
+  alert("You played PAPER");
+});
+
+buttonScissors.addEventListener("click", function() {
+  alert("You played SCISSORS");
+});
+
+
+
+
+
+//another way to do the same code but without repeating would be 
+var buttonRock = document.getElementById("action-rock");
+var buttonPaper = document.getElementById("action-paper");
+var buttonScissors = document.getElementById("action-scissors");
+;
+
+buttonRock.addEventListener("click", function() {
+  play("rock");
+});
+
+buttonPaper.addEventListener("click", function() {
+  play("paper");
+});
+
+buttonScissors.addEventListener("click", function() {
+  play("scissors");
+});
+
+function play(playerSelection){
+  alert("You played " + playerSelection);
+}
+
+
+
+
