@@ -578,3 +578,24 @@ function play(playerSelection){
 
 
 
+
+
+
+//finding with regular expressions
+
+var expression = /the/gi;
+// searches 'the' in string
+// g stands for global
+// i ignores upper and lowercase
+
+
+var expression = /\d+/g;
+// counts digits
+// + indicates one ore more
+
+var expression = /\s/g;
+// counts whitespace
+// there is also \r  (carriage return) & \n (newline)
+
+var expression = /\S/g;
+//will match anything that isn't whitespace
